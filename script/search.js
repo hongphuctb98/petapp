@@ -6,25 +6,25 @@ findBtn.addEventListener("click", function (e) {
 
   var petFind = petArr;
   if (idInput.value) {
-    petFind = petArr.filter((pet) => pet.id.includes(idInput.value));
+    petFind = petFind.filter((pet) => pet.id.includes(idInput.value));
   }
   if (nameInput.value) {
-    petFind = petArr.filter((pet) => pet.name.includes(nameInput.value));
+    petFind = petFind.filter((pet) => pet.name.includes(nameInput.value));
   }
   if (typeInput.value !== "Select Type") {
-    petFind = petArr.filter((pet) => pet.type === typeInput.value);
+    petFind = petFind.filter((pet) => pet.type === typeInput.value);
   }
   if (breedInput.value !== "Select Breed") {
-    petFind = petArr.filter((pet) => pet.breed === breedInput.value);
+    petFind = petFind.filter((pet) => pet.breed === breedInput.value);
   }
   if (vaccinatedInput.checked === true) {
-    petFind = petArr.filter((pet) => pet.vaccinated === true);
+    petFind = petFind.filter((pet) => pet.vaccinated === true);
   }
   if (dewormedInput.checked === true) {
-    petFind = petArr.filter((pet) => pet.dewormed === true);
+    petFind = petFind.filter((pet) => pet.dewormed === true);
   }
   if (sterilizedInput.checked === true) {
-    petFind = petArr.filter((pet) => pet.sterilized === true);
+    petFind = petFind.filter((pet) => pet.sterilized === true);
   }
 
   renderTableSearch(petFind);
